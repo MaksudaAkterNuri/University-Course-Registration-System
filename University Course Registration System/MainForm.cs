@@ -10,21 +10,19 @@ using System.Windows.Forms;
 
 namespace University_Course_Registration_System
 {
-    public partial class Login : Form
+    public partial class MainForm : Form
     {
-        public Login()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            MainForm Mform = new MainForm();
-            Mform.Show();
-            this.Hide();
+            Application.Exit();
         }
 
-        private void userNameTextBox_TextChanged(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }

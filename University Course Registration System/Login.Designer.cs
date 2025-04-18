@@ -39,9 +39,9 @@
             panel2 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             Username = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             LoginButton = new Guna.UI2.WinForms.Guna2Button();
             panel2.SuspendLayout();
@@ -92,6 +92,26 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // Username
+            // 
+            Username.BackColor = Color.PowderBlue;
+            Username.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Username.Location = new Point(29, 211);
+            Username.Name = "Username";
+            Username.Size = new Size(80, 23);
+            Username.TabIndex = 4;
+            Username.Text = "Username:";
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.PowderBlue;
+            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(29, 260);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(76, 23);
+            guna2HtmlLabel1.TabIndex = 5;
+            guna2HtmlLabel1.Text = "Password:";
+            // 
             // userNameTextBox
             // 
             userNameTextBox.CustomizableEdges = customizableEdges1;
@@ -112,26 +132,7 @@
             userNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
             userNameTextBox.Size = new Size(190, 32);
             userNameTextBox.TabIndex = 3;
-            // 
-            // Username
-            // 
-            Username.BackColor = Color.PowderBlue;
-            Username.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Username.Location = new Point(29, 211);
-            Username.Name = "Username";
-            Username.Size = new Size(80, 23);
-            Username.TabIndex = 4;
-            Username.Text = "Username:";
-            // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.PowderBlue;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(29, 260);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(76, 23);
-            guna2HtmlLabel1.TabIndex = 5;
-            guna2HtmlLabel1.Text = "Password:";
+            userNameTextBox.TextChanged += userNameTextBox_TextChanged;
             // 
             // passwordTextBox
             // 
@@ -162,14 +163,17 @@
             LoginButton.DisabledState.CustomBorderColor = Color.DarkGray;
             LoginButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             LoginButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            LoginButton.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LoginButton.ForeColor = Color.White;
+            LoginButton.FillColor = Color.LightCyan;
+            LoginButton.FocusedColor = Color.White;
+            LoginButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LoginButton.ForeColor = Color.Black;
             LoginButton.Location = new Point(109, 307);
             LoginButton.Name = "LoginButton";
             LoginButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             LoginButton.Size = new Size(190, 35);
             LoginButton.TabIndex = 7;
             LoginButton.Text = "Login";
+            LoginButton.Click += LoginButton_Click;
             // 
             // Login
             // 

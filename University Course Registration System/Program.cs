@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic.ApplicationServices;
+
 namespace University_Course_Registration_System
 {
     internal static class Program
@@ -8,6 +10,7 @@ namespace University_Course_Registration_System
         [STAThread]
         static void Main()
         {
+           
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
@@ -16,6 +19,11 @@ namespace University_Course_Registration_System
                 splash.ShowDialog();
             }
             Application.Run(new Login());
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new UserForm());
+            }
         }
     }
 }

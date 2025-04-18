@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace University_Course_Registration_System
 {
-    public partial class Login : Form
+    public partial class Feees : Form
     {
-        public Login()
+        public Feees()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
-        {
-            MainForm Mform = new MainForm();
-            Mform.Show();
-            this.Hide();
-        }
-
-        private void userNameTextBox_TextChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
